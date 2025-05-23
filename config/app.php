@@ -123,4 +123,32 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Application Service Providers
+    |--------------------------------------------------------------------------
+    |
+    | The service providers listed here will be automatically loaded on the
+    | request to your application. Feel free to add your own services to
+    | this array to grant expanded functionality to your applications.
+    |
+    */
+
+    Barryvdh\Snappy\ServiceProvider::class,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Class Aliases
+    |--------------------------------------------------------------------------
+    |
+    | Aliases for classes that are provided by the framework. These aliases
+    | are registered in the container and can be used to resolve the class
+    | from the container. You can use these aliases to easily access
+    | classes without needing to import them at the top of your files.
+    |
+    */
+
+    'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
+    'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
+
 ];
